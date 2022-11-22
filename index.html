@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Outfit">
+  <link rel="stylesheet" href="./index.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 53%, 66%); }
+  </style>
+
+  <script src="./index.js"> </script>
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div id="rating-wrapper" class="shown">
+    <img src="./images/icon-star.svg"/>
+    <div>
+      <h1>How did we do?</h1>
+
+      <p class="text">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+    </div>
+    
+    <div class="rating-buttons">
+      <button class="rating-button rating-value" onclick="setRateValue(1)">1</button>
+      <button class="rating-button rating-value" onclick="setRateValue(2)">2</button>
+      <button class="rating-button rating-value" onclick="setRateValue(3)">3</button>
+      <button class="rating-button rating-value" onclick="setRateValue(4)">4</button>
+      <button class="rating-button rating-value" onclick="setRateValue(5)">5</button>
+    </div>
+    
+
+    <button class="submit" onclick="giveRating()">Submit</button>
+    
+    
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    
+    <!-- Thank you state end -->
+  </div>
+  
+  <div id="rated-wrapper" class="hidden">
+    <img class="illustration" src="./images/illustration-thank-you.svg"/>
+    <p class="rate-give">You selected <span id="rate-value">5</span> out of 5</p>
+
+    <div class="thanks-container">
+      <h1>Thank you!</h1>
+
+      <p class="text">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Eduardo Rocha</a>.
+  </div>
+</body>
+</html>
